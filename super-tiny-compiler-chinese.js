@@ -422,7 +422,7 @@ function tokenizer(input) {
     }
 
     // 最后如果我们没有匹配上任何类型的 token，那么我们抛出一个错误。
-    throw new TypeError('I dont know what this character is: ' + char);
+    throw new TypeError(`I don't know what this character is: ${char}`);
   }
 
   // 词法分析器的最后我们返回 tokens 数组。
@@ -587,7 +587,7 @@ function parser(tokens) {
  *   });
  */
 
-// 所以我们定义一个遍历器，它有两个参数，AST 和 vistor。在它的里面我们又定义了两个函数...
+// 所以我们定义一个遍历器，它有两个参数，AST 和 visitor。在它的里面我们又定义了两个函数...
 function traverser(ast, visitor) {
 
   // `traverseArray` 函数允许我们对数组中的每一个元素调用 `traverseNode` 函数。
